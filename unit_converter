@@ -1,0 +1,12 @@
+# unit_converter.py
+
+def convert_units(value, from_unit, to_unit):
+    conversions = {
+        ("meters", "feet"): value * 3.281,
+        ("kilograms", "pounds"): value * 2.205,
+        ("celsius", "fahrenheit"): value * 9/5 + 32,
+    }
+    return conversions.get((from_unit, to_unit), "Conversion not supported")
+
+# Sample usage
+print(convert_units(10, "meters", "feet"))
